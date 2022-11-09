@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-text">
+            <h1>Learn to code by watching others</h1>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+        </div>
+        <div class="main-form">
+            <div class="try-free-box">
+                <p><span>Try it free seven days</span> then $20/mo. thereafter</p>
+            </div>
+            <form class="form-container" id="form">
+                <div class="item-div">
+                    <img src="/img/icon-error.svg" alt="Error" class="error-icon" id="erroricon-firstname">
+                    <input type="text" class="form-txtbox" id="txt-firstname" placeholder="First Name">
+                    <div class="error-message" id="error-firstname">First Name cannot be empty</div>
+                </div>
+                <div class="item-div">
+                    <img src="/img/icon-error.svg" alt="Error" class="error-icon" id="erroricon-lastname">
+                    <input type="text" class="form-txtbox" id="txt-lastname" placeholder="Last Name">
+                    <div class="error-message" id="error-lastname">Last Name cannot be empty</div>
+                </div>
+                <div class="item-div">
+                    <img src="/img/icon-error.svg" alt="Error" class="error-icon" id="erroricon-emailaddress">
+                    <input type="email" class="form-txtbox" id="txt-emailaddress" placeholder="Email Address">
+                    <div class="error-message" id="error-emailaddress">Email Address Name cannot be empty</div>
+                </div>
+                <div class="item-div">
+                    <img src="/img/icon-error.svg" alt="Error" class="error-icon" id="erroricon-password">
+                    <input type="password" class="form-txtbox" id="txt-password" placeholder="Password">
+                    <div class="error-message" id="error-password">Password cannot be empty</div>
+                </div>
+                <button type="submit" class="form-btn">CLAIM YOUR FREE TRIAL</button>
+                <p>By clicking the button you are agreeing to our <span>Terms and Services</span></p>
+            </form>
+        </div>
+    </div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>

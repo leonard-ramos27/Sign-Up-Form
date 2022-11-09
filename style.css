@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(/img/bg-intro-desktop.png), hsl(0, 100%, 74%);
+    min-width: 375px;
+    height: max(100vh, auto);
+    padding: 3rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.main-text{
+    margin-bottom: 3rem;
+}
+
+.main-text h1, p,
+.try-free-box p{
+    color: #ffff;
+    text-align: center;
+}
+
+.main-text h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
+}
+
+.main-text p,
+.try-free-box p{
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.try-free-box{
+    width: 100%;
+    padding: 1rem;
+    background-color: hsl(248, 32%, 49%);
+    margin-bottom: 1rem;
+}
+
+.try-free-box, .form-container{
+    border-radius: .3rem;
+    box-shadow: 0px .4rem 0  rgba(82, 82, 82, 0.253);
+}
+
+.try-free-box span{
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.form-container{
+    padding: 1.3rem;
+    background-color: #ffff;
+}
+
+.form-txtbox{
+    height: 2.5rem;
+    width: 100%;
+    margin-bottom: .8rem;
+    border: 1px solid lightgray;
+    border-radius: .2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+    padding: .8rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.form-btn{
+    height: 2.8rem;
+    width: 100%;
+    background-color: hsl(154, 59%, 51%);
+    color: #ffff;
+    border: none;
+    border-radius: .2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0px 2px 0  hsl(154, 57%, 41%);
+    margin-bottom: .8rem;
+}
+
+.form-container p{
+    color: lightgray;
+    font-size: .6rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.form-container span{
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+}
+
+.error-message{
+    display: none;
+    font-size: .7rem;
+    font-weight: 700;
+    font-style: italic;
+    color: hsl(0, 100%, 74%);
+    text-align: end;
+    margin-bottom: .8rem;
+}
+
+.txt-error-state{
+    border: .15rem solid hsl(0, 100%, 74%);
+    margin-bottom: .1rem;
+}
+
+.item-div{
+    position: relative;
+}
+
+.error-icon{
+    display: none;
+    position: absolute;
+    top: .5rem;
+    right: .8rem;
+}
+
+
+@media screen and (min-width: 850px) {
+
+    body{
+        min-height: 100vh;
+    }
+
+    .main-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container{
+        max-width: min(90%, 1000px);
+        /*display: flex;
+        flex-direction: row;*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .main-text{
+        flex-direction: column;
+    }
+
+    .main-text h1, p{
+        text-align: left;
+    }
+
+    .main-text h1{
+        font-size: 2.7rem;
+        font-weight: 700;
+        line-height: 3.5rem;
+    }
+
+    .main-text p{
+        font-size: .9rem;
+        font-weight: 400;
+    }
+
+    .try-free-box{
+        padding: 1.3rem;
+    }
+
+    .form-container{
+        width: 100%;
+        padding: 2.3rem;
+    }
+
+    .form-txtbox{
+        padding: 1.5rem;
+    }
+
+    .form-btn{
+        height: 3.2rem;
+    }
+
+    .error-icon{
+        top: .9rem;
+        right: .8rem;
+    }
+}
