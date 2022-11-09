@@ -7,7 +7,7 @@
 }
 
 body{
-    background: url("/image/bg-intro-desktop.png"), hsl(0, 100%, 74%);
+    background: url('./image/bg-intro-desktop.png'), hsl(0, 100%, 74%);
     min-width: 375px;
     height: max(100vh, auto);
     padding: 3rem 2rem;
