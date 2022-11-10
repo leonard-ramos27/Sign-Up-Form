@@ -40,12 +40,12 @@ form.addEventListener("submit", (e)=> {
         erroremailaddress.style.display = "block";
         erroriconemailaddress.style.display = "block";
         txtemailaddress.value = "";
-        txtemailaddress.placeholder="email@example/com";
+        txtemailaddress.attributes.placeholder = "email@example/com";
         txtemailaddress.classList.add("txt-error-state");
     }else{
         erroremailaddress.style.display = "none";
         erroriconemailaddress.style.display = "none";
-        txtemailaddress.placeholder="Email Address";
+        txtemailaddress.attributes.placeholder="Email Address";
         txtemailaddress.classList.remove("txt-error-state");
     }
 
