@@ -1,6 +1,7 @@
 const form = document.getElementById('form');
 
 form.addEventListener("submit", (e)=> {
+    let errorcounter = 0 ;
 
     const txtFirstName = document.getElementById('txt-firstname');
     const firstName = txtFirstName.value;
@@ -10,10 +11,13 @@ form.addEventListener("submit", (e)=> {
         errorFirstName.style.display = "block";
         erroriconFirstName.style.display = "block";
         txtFirstName.value = "";
+        txtFirstName.attributes.placeholder.value = "";
         txtFirstName.classList.add("txt-error-state");
+        errorcounter++;
     }else{
         errorFirstName.style.display = "none";
         erroriconFirstName.style.display = "none";
+        txtFirstName.attributes.placeholder.value = "First Name";
         txtFirstName.classList.remove("txt-error-state");
     }
 
@@ -25,10 +29,13 @@ form.addEventListener("submit", (e)=> {
         errorlastName.style.display = "block";
         erroriconlastName.style.display = "block";
         txtlastName.value = "";
+        txtlastName.attributes.placeholder.value = "";
         txtlastName.classList.add("txt-error-state");
+        errorcounter++;
     }else{
         errorlastName.style.display = "none";
         erroriconlastName.style.display = "none";
+        txtlastName.attributes.placeholder.value = "Last Name";
         txtlastName.classList.remove("txt-error-state");
     }
 
@@ -40,13 +47,16 @@ form.addEventListener("submit", (e)=> {
         erroremailaddress.style.display = "block";
         erroriconemailaddress.style.display = "block";
         txtemailaddress.value = "";
-        txtemailaddress.attributes.placeholder = "email@example/com";
+        txtemailaddress.attributes.placeholder.value = "email@example/com";
         txtemailaddress.classList.add("txt-error-state");
+        txtemailaddress.classList.add("txt-erroremail");
+        errorcounter++;
     }else{
         erroremailaddress.style.display = "none";
         erroriconemailaddress.style.display = "none";
-        txtemailaddress.attributes.placeholder="Email Address";
+        txtemailaddress.attributes.placeholder.value ="Email Address";
         txtemailaddress.classList.remove("txt-error-state");
+        txtemailaddress.classList.remove("txt-erroremail");
     }
 
     const txtpassword = document.getElementById('txt-password');
@@ -57,13 +67,22 @@ form.addEventListener("submit", (e)=> {
         errorpassword.style.display = "block";
         erroriconpassword.style.display = "block";
         txtpassword.value = "";
+        txtpassword.attributes.placeholder.value = "";
         txtpassword.classList.add("txt-error-state");
+        errorcounter++;
     }else{
         errorpassword.style.display = "none";
         erroriconpassword.style.display = "none";
+        txtpassword.attributes.placeholder.value = "Password";
         txtpassword.classList.remove("txt-error-state");
     }
 
-    e.preventDefault();
+    console.log(errorcounter)
+    if(errorcounter > 0){
+        e.preventDefault();
+    }else{
+        alert("Form Successfully Submitted");
+    }
+    
 })
 

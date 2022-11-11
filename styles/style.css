@@ -81,6 +81,11 @@ body{
     font-weight: 600;
 }
 
+.form-txtbox:focus{
+    border: 1px solid hsl(248, 32%, 49%);
+    outline: none !important;
+}
+
 .form-btn{
     height: 2.8rem;
     width: 100%;
@@ -94,6 +99,14 @@ body{
     letter-spacing: 1px;
     box-shadow: 0px 2px 0  hsl(154, 57%, 41%);
     margin-bottom: .8rem;
+}
+
+.form-btn:hover{
+    opacity: .8;
+}
+
+.form-btn:active{
+    opacity: .5;
 }
 
 .form-container p{
@@ -122,6 +135,10 @@ body{
 .txt-error-state{
     border: .15rem solid hsl(0, 100%, 74%);
     margin-bottom: .1rem;
+}
+
+.txt-erroremail::placeholder{
+    color: hsl(0, 100%, 74%);
 }
 
 .item-div{
@@ -196,6 +213,6 @@ body{
 
     .error-icon{
         top: .9rem;
-        right: .8rem;
+        right: 1rem;
     }
 }
