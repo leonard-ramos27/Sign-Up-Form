@@ -168,8 +168,6 @@ body{
 
     .main-container{
         max-width: min(90%, 1000px);
-        /*display: flex;
-        flex-direction: row;*/
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
